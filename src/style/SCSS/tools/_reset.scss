@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  // cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+fieldset,
+button {
+  border: none;
+  background: none;
+}
+
+/* inputs */
+input,
+button,
+textarea,
+select {
+  font-style: inherit;
+  -webkit-padding-start: 0;
+  align-items: flex-start;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+input[type= submit],
+button {
+  cursor: pointer;
+}

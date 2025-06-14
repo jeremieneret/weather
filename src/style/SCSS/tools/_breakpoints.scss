@@ -1,0 +1,37 @@
+// Mobile breakpoints
+$mobile-xs: 375px;
+$mobile-s: 414px;
+$mobile-m: 440px;
+$mobile-l: 555px;
+$mobile-xl: 600px;
+// Tablet breakpoints
+$tablet-xs: 640px;
+$tablet-s: 715px;
+$tablet-m: 850px;
+$tablet-l: 990px;
+$tablet-xl: 1000px;
+// Desktop breakpoints
+$desktop-xs: 1024px;
+$desktop-s: 1175px;
+$desktop-m: 1280px;
+$desktop-l: 1350px;
+$desktop-xl: 1440px;
+
+// MIXINS
+@mixin media-min($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin media-max($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin media-between($breakpoint1, $breakpoint2) {
+    @media (min-width: $breakpoint1) and (max-width: $breakpoint2) {
+        @content;
+    }
+}

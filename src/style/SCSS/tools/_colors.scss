@@ -1,0 +1,12 @@
+$bodyBackground : #0E1325;
+$cardBackground : #394150;
+$primary : #E5E7EB;
+$yellow : #FEBD2E;
+$blue : #4E80EE;
+
+
+#root,
+body {
+  background-color: $bodyBackground;
+  color: $primary;
+}

@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+fieldset,
+button {
+  border: none;
+  background: none;
+}
+
+/* inputs */
+input,
+button,
+textarea,
+select {
+  font-style: inherit;
+  -webkit-padding-start: 0;
+  align-items: flex-start;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=submit],
+button {
+  cursor: pointer;
+}
+
+#root,
+body {
+  background-color: #0E1325;
+  color: #E5E7EB;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}/*# sourceMappingURL=style.css.map */
