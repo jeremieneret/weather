@@ -1,0 +1,29 @@
+img {
+  width: 36px;
+  height: 36px;
+}
+
+.search-bar-and-unit-toggle-container,
+.current-weather-and-daily-forecast-container,
+.daily-forecast-and-city-weather-container {
+  display: flex;
+  padding: 0 72px;
+  gap: 44px;
+}
+
+.app-container {
+  display: block;
+}
+
+.search-bar-and-unit-toggle-container {
+  justify-content: space-between;
+  margin: 28px auto 36px ;
+}
+
+.current-weather-and-daily-forecast-container {
+  margin-bottom: 48px;
+}
+
+.daily-forecast-and-city-weather-container {
+
+}

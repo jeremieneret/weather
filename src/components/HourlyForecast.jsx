@@ -7,7 +7,7 @@ export default function HourlyForecast({ data, deg }) {
       <ul>
         {data.map((slot) => (
           <li key={slot.time}>
-            <span className="hour">{slot.time}</span> –{" "}
+            <span className="hour">{slot.time}</span>{" "}
             <img
               src={`/assets/${slot.icon}.png`}
               alt={slot.status}

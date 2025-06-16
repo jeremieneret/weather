@@ -11,6 +11,10 @@ import useCurrentWeather from "./hooks/useCurrentWeather";
 import useForecast from "./hooks/useForecast";
 import useFixedCities from "./hooks/useFixedCities";
 
+import Search from '/assets/Search.svg'
+
+import './style/CSS/style.css'
+
 export default function App() {
   /* état global UI */
   const [unit, setUnit] = useState("metric");
@@ -26,13 +30,24 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <SearchBar onSearch={setSearch} />
-      <UnitToggle unit={unit} onToggle={() => setUnit((u) => (u === "metric" ? "imperial" : "metric"))} />
 
-      <CurrentWeather weather={current} deg="°" />
-      <HourlyForecast data={hourly} deg="°" />
-      <DailyForecast data={daily} deg="°" />
-      {cities && <CityWeather data={cities} deg="°" />}
+      <div className="search-bar-and-unit-toggle-container">
+        <div className="search-bar-container">
+          <img src={Search} alt="search" />
+          <SearchBar onSearch={setSearch} />
+        </div>
+        <UnitToggle unit={unit} onToggle={() => setUnit((u) => (u === "metric" ? "imperial" : "metric"))} />
+      </div>
+
+      <div className="current-weather-and-daily-forecast-container">
+        <CurrentWeather weather={current} deg="°" />
+        <HourlyForecast data={hourly} deg="°" />
+      </div>
+
+      <div className="daily-forecast-and-city-weather-container">
+        {cities && <CityWeather data={cities} deg="°" />}
+        <DailyForecast data={daily} deg="°" />
+      </div>
     </div>
   );
 }
