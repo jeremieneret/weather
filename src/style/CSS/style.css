@@ -84,6 +84,22 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+}
+
+.app {
+  transform: translateX(calc(50vw - 50%));
+}
+
 img {
   width: 36px;
   height: 36px;
@@ -97,10 +113,6 @@ img {
   gap: 44px;
 }
 
-.app-container {
-  display: block;
-}
-
 .search-bar-and-unit-toggle-container {
   justify-content: space-between;
   margin: 28px auto 36px;
@@ -110,11 +122,142 @@ img {
   margin-bottom: 48px;
 }
 
+.city-weather ul li {
+  padding: 20px;
+  width: 340px;
+  height: 118px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #20293A;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+.city-weather .country-city-status-container span {
+  display: block;
+}
+.city-weather .country {
+  color: #97A3B6;
+  font-size: 14px;
+}
+.city-weather .city {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.city-weather .status {
+  font-size: 10px;
+}
+.city-weather img {
+  margin-bottom: 12px;
+}
+
+.current-weather {
+  width: 340px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 24px 20px;
+  background-color: #20293A;
+  border-radius: 16px;
+}
+.current-weather .temp-city-time-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.current-weather .city-and-time-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+}
+.current-weather .status-wind-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.current-weather .hi-lo-feels-like-container {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+}
+.current-weather .temp {
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 48px;
+}
+.current-weather .city {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+.current-weather .time {
+  font-size: 12px;
+}
+.current-weather .wind {
+  display: flex;
+  align-items: center;
+}
+.current-weather .wind img {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+}
+.current-weather .hi-lo,
+.current-weather .feels-like {
+  font-size: 12px;
+}
+.current-weather .status {
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  color: #97A3B6;
+}
+.current-weather .status img {
+  margin-right: 12px;
+}
+
+.daily-forecast {
+  width: 100%;
+}
+.daily-forecast ul li {
+  background-color: #20293A;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hourly-forecast ul {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.hourly-forecast ul li {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80px;
+  background-color: #20293A;
+  padding: 24px 0;
+  border-radius: 16px;
+}
+.hourly-forecast .status {
+  font-size: 10px;
+  color: #97a3b6;
+}
+
 .search-bar-container {
   display: flex;
   background-color: #20293A;
   border-radius: 50px;
-  padding: 8px 103px 8px 8px;
+  padding: 8px;
+  max-width: 240px;
+  width: 100%;
 }
 .search-bar-container img {
   width: 24px;
@@ -124,4 +267,87 @@ img {
 }
 .search-bar-container input {
   background-color: #20293A;
+  color: #F2F5F9;
+  transform: translateY(1px);
+}
+
+.search-bar input::-moz-placeholder {
+  color: #97a3b6;
+}
+
+.search-bar input::placeholder {
+  color: #97a3b6;
+}
+
+.unit-toggle {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.unit-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #20293A;
+  border-radius: 34px;
+  transition: background 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  bottom: 7px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.4s;
+  z-index: 1;
+}
+
+.label-c,
+.label-f {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font: 700 0.8rem/1 sans-serif;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.label-c {
+  left: 25%;
+}
+
+.label-f {
+  left: 75%;
+}
+
+.label-c {
+  color: black;
+}
+
+.label-f {
+  color: white;
+}
+
+input:checked + .slider::before {
+  transform: translateX(38px);
+}
+
+input:checked + .slider .label-c {
+  color: white;
+}
+
+input:checked + .slider .label-f {
+  color: black;
 }/*# sourceMappingURL=style.css.map */

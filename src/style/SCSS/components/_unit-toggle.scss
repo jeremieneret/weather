@@ -1,0 +1,59 @@
+@use "../tools" as *;
+
+.unit-toggle {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.unit-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: $cardBackground;
+  border-radius: 34px;
+  transition: background 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  bottom: 7px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.4s;
+  z-index: 1;
+}
+
+.label-c,
+.label-f {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font: 700 0.8rem/1 sans-serif;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.label-c { left: 25%; }
+.label-f { left: 75%; }
+
+.label-c { color: black; }
+.label-f { color: white; }
+
+input:checked + .slider::before {
+  transform: translateX(38px);
+}
+
+input:checked + .slider .label-c { color: white; }
+input:checked + .slider .label-f { color: black; }

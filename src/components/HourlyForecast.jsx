@@ -3,7 +3,6 @@ export default function HourlyForecast({ data, deg }) {
 
   return (
     <div className="hourly-forecast">
-      <h3>Prochaines 24 h</h3>
       <ul>
         {data.map((slot) => (
           <li key={slot.time}>
@@ -17,7 +16,7 @@ export default function HourlyForecast({ data, deg }) {
                   `https://openweathermap.org/img/wn/${slot.icon}.png`)
               }
             />{" "}
-            <span className="status">{slot.status}</span> –{" "}
+            <span className="status">{slot.status}</span>{" "}
             <span className="temp">{slot.temp.toFixed(1)}{deg}</span>
           </li>
         ))}

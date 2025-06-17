@@ -4,7 +4,9 @@
   display: flex;
   background-color: $cardBackground;
   border-radius: 50px;
-  padding: 8px 103px 8px 8px;
+  padding: 8px;
+  max-width: 240px;
+  width: 100%;
   img {
     width: 24px;
     height: 24px;
@@ -12,6 +14,12 @@
     padding: 2px 0;
   }
   input {
-  background-color: $cardBackground;
+    background-color: $cardBackground;
+    color: $primary;
+    transform: translateY(1px);
   }
+}
+
+.search-bar input::placeholder {
+  color: #97a3b6;
 }

@@ -22,7 +22,8 @@ export default function useCurrentWeather(coords, unit) {
           wind:   toSpeed(d.wind.speed, unit),
           status: d.weather[0].description,
           icon:   d.weather[0].icon,
-          tzOffset: d.timezone,           // secondes par rapport à UTC
+          tzOffset: d.timezone,  
+          feels_like: d.main.feels_like,
         });
         setError(null);
       // eslint-disable-next-line no-unused-vars

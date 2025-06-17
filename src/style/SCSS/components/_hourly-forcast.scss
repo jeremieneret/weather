@@ -1,0 +1,25 @@
+@use "../tools/" as *;
+
+.hourly-forecast {
+  ul {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+    flex-wrap: wrap;
+    li {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 80px;
+      background-color: $cardBackground;
+      padding: 24px 0;
+      border-radius: 16px;
+    }
+  }
+  .status {
+    font-size: 10px;
+    color: #97a3b6;
+  }
+}

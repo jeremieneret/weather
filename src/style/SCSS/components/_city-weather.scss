@@ -1,0 +1,34 @@
+@use "../tools/" as *;
+
+.city-weather {
+  ul {
+    li {
+      padding: 20px;
+      width: 340px;
+      height: 118px;
+      display: flex;
+      justify-content: space-between;
+      background-color: $cardBackground;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+  }
+  .country-city-status-container span {
+    display: block;
+  }
+
+  .country {
+    color: #97A3B6;
+    font-size: 14px;
+  }
+  .city {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .status {
+    font-size: 10px;
+  }
+  img {
+    margin-bottom: 12px;
+  }
+}

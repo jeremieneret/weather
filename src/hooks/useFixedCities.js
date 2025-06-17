@@ -4,7 +4,7 @@ import { WEATHER_URL, OW_KEY } from "../utils/api";
 const CITY_LIST = [
   { q: "Paris,FR",  country: "France" },
   { q: "London,GB", country: "United Kingdom" },
-  { q: "Milan,IT",  country: "Italy" },
+  { q: "New York",  country: "USA" },
 ];
 
 export default function useFixedCities(unit) {

@@ -1,0 +1,75 @@
+@use "../tools/" as *;
+
+.current-weather {
+  width: 340px;
+  height: fit-content;
+  padding: 24px 20px;
+  background-color: $cardBackground;
+  border-radius: 16px;
+  .temp-city-time-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .city-and-time-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .status-wind-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .hi-lo-feels-like-container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+  }
+
+  .temp {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 48px;
+  }
+
+  .city {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+
+  .time {
+    font-size: 12px;
+  }
+
+  .wind {
+    display: flex;
+    align-items: center;
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+    }
+  }
+
+  .hi-lo,
+  .feels-like {
+    font-size: 12px;
+  }
+
+  .status {
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    color: #97A3B6;
+    img {
+      margin-right: 12px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use '../tools/' as *;
+
+.daily-forecast {
+  width: 100%;
+  ul {
+    li {
+      background-color: $cardBackground;
+      border-radius: 16px;
+      margin-bottom: 12px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

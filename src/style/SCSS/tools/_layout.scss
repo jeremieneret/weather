@@ -1,3 +1,13 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+}
+
+.app {
+  transform: translateX(calc(50vw - 50%));
+}
+
 img {
   width: 36px;
   height: 36px;
@@ -11,13 +21,9 @@ img {
   gap: 44px;
 }
 
-.app-container {
-  display: block;
-}
-
 .search-bar-and-unit-toggle-container {
   justify-content: space-between;
-  margin: 28px auto 36px ;
+  margin: 28px auto 36px;
 }
 
 .current-weather-and-daily-forecast-container {
@@ -25,5 +31,4 @@ img {
 }
 
 .daily-forecast-and-city-weather-container {
-
 }
