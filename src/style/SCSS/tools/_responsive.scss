@@ -1,0 +1,33 @@
+@use "./breakpoints" as *;
+
+@include media-max($tablet-s) {
+  .app-container {
+    padding: 24px;
+    transform: translateX(-24px);
+  }
+  .current-weather-and-daily-forecast-container,
+  .daily-forecast-and-city-weather-container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .daily-forecast-and-city-weather-container {
+    flex-direction: column-reverse;
+  }
+  .search-bar-and-unit-toggle-container {
+    padding: 0;
+  }
+
+  .current-weather {
+    margin-bottom: 44px;
+    width: 100% !important;
+  }
+  .hourly-forecast ul {
+    justify-content: center;
+  }
+  .city-weather ul li {
+    width: 100% !important;
+  }
+  .search-bar-container {
+    width: fit-content !important;
+  }
+}
